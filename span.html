@@ -15,10 +15,19 @@
 		    }
 			ul   {
 				list-style: none;
+				padding: 0px;
+				margin: 0px;
 			}
 
 			ul li{
 				background-color: grey;
+				width: 150px;
+				float:left;
+				border:1px solid white;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				position: relative;	
 			}
 			h2{
 				padding: 20px;
@@ -26,17 +35,63 @@
 				text-align: center;
 				color: snow;
 			}
+
+			ul li a{
+				text-decoration: none;
+				color: skyblue;
+				display: block;
+			}
+
+			ul li a:hover{
+				color: blue;
+				text-decoration: underline;
+				
+			}
+
+			ul li:hover{
+				background-color: green;
+			}
+
+			ul ul{
+				display: none;
+			}
+
+			ul li:hover >ul {
+				display: block;
+			}
+
+			ul ul ul{
+				margin-left: 150px;
+				position: absolute;
+				top: 0px;
+			}
 		</style>
 	</head>
 		<body>
 			<div id="main">
-			<h2>how to make dropdown and sub menu</h2>
+			<h2>Making dropdown and sub menu</h2>
 			    <ul>
-					<li>Home</li>
-					<li>about us</li>
-					<li>tutorial</li>
-					<li>branch</li>
-					<li>contanct us</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">about us</a></li>
+					<li><a href="#">tutorial <span><img src="images/arrow.png"></span> </a>
+						<ul>
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS<span><img src="images/arrow2.png"></span></a>
+ 								<ul>
+ 									<li><a href="#">page 1</a></li>
+ 									<li><a href="#">page 2</a></li>
+ 									<li><a href="#">page 3</a></li>
+ 									<li><a href="#">page 4</a></li>
+ 									<li><a href="#">page 5</a></li>
+ 								</ul>
+							</li>
+							<li><a href="#">JAVA SCRIPT</a></li>
+							<li><a href="#">JQUERY</a></li>
+						</ul>
+
+					</li>
+					<li><a href="#">branch</a></li>
+					<li><a href="#">contanct us</a></li>
 				</ul>
 				
 			</div>
